@@ -1,1012 +1,1285 @@
 <!DOCTYPE html>
 <html lang="en-US" class="html">
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!-- FONT AWESOME ------------------------------------------------------------------------------------>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-
-  <!-- ANIMATE.CSS ------------------------------------------------------------------------------------->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
-  <link rel="stylesheet" href="./public/style.css">
-  
-  
-  <style>
-    html body {
-      min-height: 100%;
-      background-image: url(bg.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-    }
-
-    body {
-      font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-      text-align: left;
-      background: #0a192f;
-      color: #fff;
-
-    }
-
-    .light {
-      background: #666;
-      color: #fff;
-    }
-
-    .content .tagcloud {
-      display: inline-block;
-      margin: 20px;
-    }
-
-    ul {
-      display: inline-block;
-    }
-
-    a {
-      color: #cacfdd;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: none;
-    }
-  
-    .tagcloud {
-      font-size: 20px;
-      color: #fff;
-    }
-
-    .tagcloud--item {
-      padding: 2px 4px;
-      background-color: transparent;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-
-    .tagcloud--item:hover {
-      background-color: rgba(0, 0, 0, .1);
-      border: 1px solid #333;
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      border-radius: 2px;
-      opacity: 1 !important;
-      z-index: 100 !important;
-    }
-
-    .light .tagcloud--item {
-      color: #fff;
-    }
-
-    .light .tagcloud--item:hover {
-      background-color: rgba(255, 255, 255, .1);
-      border: 1px solid #fff;
-    }
-  </style>
-</head>
-
-
-
-<body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container p-2">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#SobreMi" class="nav-link"> <i class="fas fa-address-card"></i> Acerca de mí</a>
-          </li>
-          <li class="nav-item">
-            <a href="#FormacionAcademica" class="nav-link"> <i class="fas fa-university"></i> Formación</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ExperienciaLaboral" class="nav-link"> <i class="fas fa-briefcase"></i> Experiencia</a>
-          </li>
-          <li class="nav-item">
-            <a href="#Habilidades" class="nav-link"> <i class="fas fa-award"></i> Habilidades</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ReferenciasLaborales" class="nav-link"> <i class="fas fa-user-friends"></i> Referencias</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://github.com/Scaldy " target="_blank" class="nav-link"><i class="fab fa-github"></i></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/marcelo-scaldaferro" target="_blank" class="nav-link"><i class="fab fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="#MailMS" class="nav-link"><i class="fas fa-envelope"></i></a>    
-          </li>
-          <li>
-            <a href="#TelMS" class="nav-link"><i class="fas fa-phone"></i></a>    
-          </li>
-          <li>
-            <a href="https://www.facebook.com/mscaldaferro/" target="_blank" class="nav-link"><i class="fab fa-facebook"></i></a>    
-          </li>
-          <li>
-            <a href="https://www.instagram.com/marceloscaldaferro" target="_blank" class="nav-link"><i class="fab fa-instagram"></i></a>    
-          </li>
-          <li>
-            <a href="https://twitter.com/MScaldaferro" target="_blank" class="nav-link"><i class="fab fa-twitter"></i></a>    
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-
-  <section class="main-content">
-    <br>
-    <br>
-    <p align="left"><img class="rounded w-auto animated jackInTheBox " src="./public/DeBrazosCruzadosSmall.png" alt="Marcelo Scaldaferro"></p>
-    <br>
-    <p style="color:#64ffda;font-family:SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace">Hola, mi nombre es</p>
-
-    <strong>
-      <p style="line-height: 60%;color:#cacfdd;font-style:bold;font-family:Calibre,San Francisco,SF Pro Text,-apple-system,system-ui,sans-serif;font-size:30pt;">Marcelo Scaldaferro.</p>
-      <p style="color:#8892b0;font-style:bold;font-family:Calibre,San Francisco,SF Pro Text,-apple-system,system-ui,sans-serif;font-size:20pt;">Construyo soluciones de software.</p>
-    </strong>
-    
-    <br>
-    <br>
-
-    <p>
-      Soy Licenciado en Sistemas de Información, egresado de Universidad ORT, vivo con mi familia en Montevideo, 
-      soy Analista Senior GeneXus con muchos años de experiencia, y me apasiona el mundo de las 
-      herramientas ágiles y cultura DevOps.
-    </p>
-    <br>
-    <br>
-    <br>
-
-    <hr>
-
-    <p><i class="fas fa-calendar"></i> Fecha de Nacimiento: 15/10/1976 (44 años)</p>
-
-    <p><i class="fas fa-id-card"></i> Cédula de Identidad: 4.163.178 -5</p>
-
-    <p><i class="fas fa-map-marker-alt"></i> Domicilio: Yaguarón 2015, Aguada.</p>
-
-    <p><i class="fas fa-home"></i> Situación Familiar: Casado, 2 hijos.</p>
-
-    <p id="TelMS"><i class="fas fa-phone"></i> Tel: 2925 42 31  <i class="fas fa-mobile-alt"></i> Cel: 099 794 774</p>
-
-    <p id="MailMS"><i class="fas fa-envelope"></i> Email: <a
-        href="https://scaldy.github.io/Marcelo-Scaldaferro-CV/marceloscaldaferro@hotmail.com">marceloscaldaferro@hotmail.com</a>
-    </p>
-
-    <p><i class="fab fa-linkedin"></i> Linkedin: <a
-        href="https://www.linkedin.com/in/marcelo-scaldaferro">https://www.linkedin.com/in/marcelo-scaldaferro</a></p>
-
-    <p><i class="fab fa-github"></i> Github: <a
-        href="https://github.com/Scaldy">https://github.com/Scaldy</a></p>
-
-    <hr>
-
-
-
-
-    <!-- Sobre mí ------------------------------------------------------------------------------->
-    <h4 id="SobreMi"><i class="fas fa-address-card"></i> Acerca de mí</h4>
-
-    <p>Me siento un profesional en constante formación, un eterno estudiante y aprendiz de la tecnología.
-      Soy experto en algunas áreas técnicas, y un apasionado aprendiz en otras.
-      Alguien en constante evolución, que aprende día a día como pasar de ser experto a ejecutivo.
-    </p>
-
-    <p>Soy Licenciado en Sistemas de Información, me desempeño como Analista Senior GeneXus desde hace más de 20 años.
-      Experiencia en todos los generadores, bases de datos y versiones, principal experiencia en generador Web Java – GX
-      17 en el desarrollo de APIs de microservicios web y procesos batch.</p>
-
-    <p>Aplico buenas prácticas adquiridas en la formación académica y en la experiencia profesional.</p>
-
-    <p>Tengo excelente desempeño en análisis y diseño, metódico en todo el proceso de ingeniería del software, sobre todo en
-      metodologías ágiles (SCRUM, XP y KANBAN) y en los últimos tiempos incorporando prácticas de DEVOPS, particularmente
-      me interesa el uso de herramientas ágiles que ayudan a mejorar la productividad y mejoran la calidad del software.</p>
-
-    <p>Mis Valores:<br>
-      Trabajo en Equipo. Colaboración. Transparencia. Orden. Organización. Compromiso. Responsabilidad.
-    </p>
-
-    <p>Habilidades principales:<br>
-      Autodidacta. Investigación. Al día con la Tecnología.
-      Colaborativo. Rápido Aprendizaje. Empático.</p>
-
-    <p>Intereses Principales:</p>
-
-    <ul>
-      <li><i class="fas fa-sitemap"></i>   Arquitectura de Sistemas</li>
-      <li><i class="fas fa-user-graduate"></i>  Ingeniería de Software</li>
-      <li><i class="fas fa-running"></i>   Metodologías Ágiles.</li>
-      <li><i class="fas fa-infinity"></i>   DevOps</li>
-      <li><i class="fas fa-user-shield"></i>   Hacking Ético</li>
-    </ul>
-
-    <br>
-
-    
-
-    <hr>
-
-    <h3 id="FormacionAcademica"><i class="fas fa-university"></i> 1 – Formación Académica</h3>
-
-    <!--table class="tablaCustomizada table table-striped table-dark"-->
-    <table>
-      
-      <thead>
-        <tr>
-          <th>Nivel</th>
-          <th>Institución</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Primaria</strong></td>
-          <td>Colegio Nuestra Señora del Carmen</td>
-        </tr>
-        <tr>
-          <td><strong>Ciclo Básico</strong></td>
-          <td>Colegio y Liceo Adoratrices</td>
-        </tr>
-        <tr>
-          <td><strong>Bachillerato</strong></td>
-          <td>Opción Ingeniería. Liceo Nº 2 Héctor Miranda</td>
-        </tr>
-        <tr>
-          <td><strong>Terciaria</strong></td>
-          <td><strong>Ingeniería en Computación</strong> – UDELAR</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>Hasta 2do año cursado. 1996 – 1997</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td><strong>Analista de Sistemas en Computación</strong> – Universidad ORT</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>Título Intermedio de Licenciatura – 1998 – 2001</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td><strong>Licenciado en Sistemas de Información</strong> – Universidad ORT</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>Promedio Acumulado de Calificaciones 93% - 2006 – 2010</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td><strong>Inglés Nivel Intermedio Completo</strong> - Alianza Uruguay EEUU</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>2 años - 2011-2012</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td><strong>Hacking Ético y Gestión de Incidentes</strong> - Universidad ORT</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>6 meses - 2019</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr>
-
-    <h4 id="11-formación-en-genexus"><i class="fas fa-file-code"></i> 1.1 Formación en GeneXus</h4>
-
-    <table >
-      <thead>
-        <tr>
-          <th>Curso</th>
-          <th>Institución</th>
-          <th>Duración</th>
-          <th>Año</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Analista GeneXus 6.1</td>
-          <td>Artech</td>
-          <td>6 semanas</td>
-          <td>2000</td>
-        </tr>
-        <tr>
-          <td>Certificado VII Encuentro Técnico GeneXus Alliance</td>
-          <td>Artech</td>
-          <td>2 días</td>
-          <td>2002</td>
-        </tr>
-        <tr>
-          <td>Certificado VIII Encuentro Técnico GeneXus Alliance</td>
-          <td>Artech</td>
-          <td>2 días</td>
-          <td>2003</td>
-        </tr>
-        <tr>
-          <td>Actualización GeneXus 9.0</td>
-          <td>Artech – LATU</td>
-          <td>5 días</td>
-          <td>2007</td>
-        </tr>
-        <tr>
-          <td>Taller de K2B Tools</td>
-          <td>GeneXus Consulting</td>
-          <td>2 días</td>
-          <td>2009</td>
-        </tr>
-        <tr>
-          <td>Actualización GeneXus X Ev.1</td>
-          <td>Artech – LATU</td>
-          <td>5 días</td>
-          <td>2010</td>
-        </tr>
-        <tr>
-          <td>Curso de GXPlorer – Business Intelligence</td>
-          <td>Artech – LATU</td>
-          <td>5 días</td>
-          <td>2011</td>
-        </tr>
-        <tr>
-          <td>Curso de GXFlow – Business Process Modeler</td>
-          <td>Artech – LATU</td>
-          <td>5 días</td>
-          <td>2011</td>
-        </tr>
-        <tr>
-          <td>Actualización GeneXus X Ev.2</td>
-          <td>Artech – LATU</td>
-          <td>5 días</td>
-          <td>2012</td>
-        </tr>
-        <tr>
-          <td>Taller de GXTest y GXUnit</td>
-          <td>Artech – Abstracta</td>
-          <td>2 días</td>
-          <td>2013</td>
-        </tr>
-        <tr>
-          <td>Taller de SmartDevices con GXEv3</td>
-          <td>Artech - LATU</td>
-          <td>3 días</td>
-          <td>2014</td>
-        </tr>
-        <tr>
-          <td>Taller de Arquitectura de API WEB</td>
-          <td>GeneXus - G.Canedo</td>
-          <td>8 días</td>
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Analista GeneXus Senior Ev 3</td>
-          <td>GeneXus – Calif.: 97%</td>
-          <td>Examen</td>
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Taller de GXServer 15</td>
-          <td>GeneXus – A.Piccardo</td>
-          <td>2 días</td>
-          <td>2017</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr>
-
-    <h4 id="12-talleres-de-formación-técnica-presenciales-y-online"><i class="fas fa-graduation-cap"></i>  1.2 Talleres de Formación Técnica (Presenciales y
-      Online)</h4>
-
-      <table >
-      <thead>
-        <tr>
-          <th>Taller o Curso</th>
-          <th>Institución</th>
-          <th>Duración</th>
-          <th>Año</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Operador PC</td>
-          <td>Megasoft</td>
-          <td>3 meses</td>
-          <td>1998</td>
-        </tr>
-        <tr>
-          <td>Programador Visual (VB y Visual C++)</td>
-          <td>Megasoft</td>
-          <td>6 meses</td>
-          <td>1999</td>
-        </tr>
-        <tr>
-          <td>Administrador Windows NT 4.0</td>
-          <td>Infocorp</td>
-          <td>2 meses</td>
-          <td>1999</td>
-        </tr>
-        <tr>
-          <td>Taller de Jasper</td>
-          <td>Datalogic Ingenieros</td>
-          <td>5 jornadas</td>
-          <td>2007</td>
-        </tr>
-        <tr>
-          <td>Certificado en Testing para Desarrolladores</td>
-          <td>CES</td>
-          <td>8 días</td>
-          <td>2015</td>
-        </tr>
-        <tr>
-          <td>Workshop de Stack ELK (Elastic Search, Logstash y Kibana)</td>
-          <td>Atos</td>
-          <td>1 día</td>
-          <td>2017</td>
-        </tr>
-        <tr>
-          <td>Agile Developer</td>
-          <td>Peregrinus</td>
-          <td>2 días</td>
-          <td>2018</td>
-        </tr>
-        <tr>
-          <td>DEVOPS - Integración continua con JENKINS</td>
-          <td>Pablo Fredrikson</td>
-          <td>12 capítulos</td>
-          <td>2018</td>
-        </tr>
-        <tr>
-          <td>DEVOPS - Docker and Kubernetes</td>
-          <td>Pablo Fredrikson</td>
-          <td>19 capítulos</td>
-          <td>2018</td>
-        </tr>
-        <tr>
-          <td>Curso Básico de Jenkins</td>
-          <td>Platzi.com</td>
-          <td>15 capítulos</td>
-          <td>2018</td>
-        </tr>
-        <tr>
-          <td>Curso de POSTMAN</td>
-          <td>Platzi.com</td>
-          <td>15 capítulos</td>
-          <td>2018</td>
-        </tr>
-        <tr>
-          <td>Training Azure DevOps</td>
-          <td>Epidata Argentina</td>
-          <td>1 día</td>
-          <td>2019</td>
-        </tr>
-        <tr>
-          <td>Azure Fundamentals</td>
-          <td>Sodexo BRS</td>
-          <td>2 días</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Azure Administrator</td>
-          <td>Sodexo BRS</td>
-          <td>30 horas</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Curso de API REST</td>
-          <td>Platzi.com</td>
-          <td>18 capítulos</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Curso de Autenticación con OAuth 2.0 y OIDC</td>
-          <td>Platzi.com</td>
-          <td>38 capítulos</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Curso de ASP .NET Core</td>
-          <td>Platzi.com</td>
-          <td>35 capítulos</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Curso Profesional de GIT y GITHUB</td>
-          <td>Platzi.com</td>
-          <td>42 capítulos</td>
-          <td>2021</td>
-        </tr>
-        <tr>
-          <td>Curso Profesional de Arquitectura de Software</td>
-          <td>Platzi.com</td>
-          <td>43 capítulos</td>
-          <td>2021</td>
-        </tr>
-        <tr>
-          <td>Curso de Travis CI</td>
-          <td>Platzi.com</td>
-          <td>15 capítulos</td>
-          <td>2021</td>
-        </tr>
-        <tr>
-          <td>Curso de Fundamentos de Docker</td>
-          <td>Platzi.com</td>
-          <td>25 capítulos</td>
-          <td>2021</td>
-        </tr>
-        <tr>
-          <td>Curso de Arquitectura para Aplicaciones con Docker</td>
-          <td>Platzi.com</td>
-          <td>48 capítulos</td>
-          <td>2021</td>
-        </tr>
-        <tr>
-          <td>Curso Básico de Node.JS</td>
-          <td>Platzi.com</td>
-          <td>35 capítulos</td>
-          <td>2021</td>
-        </tr>
-        <tr>
-          <td>Curso de React.JS</td>
-          <td>Platzi.com</td>
-          <td>37 capítulos</td>
-          <td>2021</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr>
-
-    <h4 id="13-talleres-de-formación-no-técnica-y-en-gestión"><i class="fas fa-tasks"></i> 1.3 Talleres de Formación No Técnica y en Gestión</h4>
-
-    <table >
-      <thead>
-        <tr>
-          <th>Taller o Curso</th>
-          <th>Institución</th>
-          <th>Duración</th>
-          <th>Año</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Taller de Herramientas Básicas para Gestión de Calidad y certificación ISO 9001</td>
-          <td>Monte Cúdine</td>
-          <td>3 días</td>
-          <td>2000</td>
-        </tr>
-        <tr>
-          <td>Taller de los 7 Hábitos de personas altamente efectivas</td>
-          <td>Franklin Covey</td>
-          <td>5 días</td>
-          <td>2008</td>
-        </tr>
-        <tr>
-          <td>SCRUM Master</td>
-          <td>Scrum.org</td>
-          <td>1 mes</td>
-          <td>2011</td>
-        </tr>
-        <tr>
-          <td>Taller de Liderazgo</td>
-          <td>COPAC</td>
-          <td>3 días</td>
-          <td>2013</td>
-        </tr>
-        <tr>
-          <td>Taller de Negociación</td>
-          <td>COPAC</td>
-          <td>2 días</td>
-          <td>2013</td>
-        </tr>
-        <tr>
-          <td>Taller de Acoso Laboral</td>
-          <td>Redpagos</td>
-          <td>1 día</td>
-          <td>2017</td>
-        </tr>
-        <tr>
-          <td>Taller de Prevención de Lavado de Activos y Financiación del Terrorismo</td>
-          <td>RedPagos</td>
-          <td>2 días</td>
-          <td>2017</td>
-        </tr>
-        <tr>
-          <td>Taller de Metodología SCRUM</td>
-          <td>Peregrinus</td>
-          <td>2 días</td>
-          <td>2017</td>
-        </tr>
-        <tr>
-          <td>Taller de Prevención de Accidentes Laborales</td>
-          <td>Redpagos</td>
-          <td>1 día</td>
-          <td>2017</td>
-        </tr>
-        <tr>
-          <td>Mentoría SCRUM</td>
-          <td>Peregrinus</td>
-          <td>8 meses</td>
-          <td>2018</td>
-        </tr>
-        <tr>
-          <td>Curso para Líderes en Formación</td>
-          <td>Platzi.com</td>
-          <td>27 capítulos</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Taller de Trabajo Remoto</td>
-          <td>Sodexo BRS</td>
-          <td>1 jornada</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Curso de Trabajo Remoto o Teletrabajo</td>
-          <td>Platzi.com</td>
-          <td>24 capítulos</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Taller para Equipos de Trabajo Ágiles</td>
-          <td>Sodexo BRS</td>
-          <td>3 jornadas</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>WorkShop de Gestión del Cambio</td>
-          <td>Sodexo BRS</td>
-          <td>3 jornadas</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>Curso de Liderazgo Creativo</td>
-          <td>Platzi.com</td>
-          <td>18 capítulos</td>
-          <td>2020</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr/>
-
-    <blockquote>
-      <p>Otros talleres, trainings, charlas, eventos, webinars, meetups, sobre GX, Agile, OWASP, BlockChain, Azure
-        Devops.</p>
-    </blockquote>
-
-    <blockquote>
-      <p>Aprendizaje en Youtube sobre GX, Seguridad, Linux, GitHub, DataScience, AI, Bases de Datos NoSQL, DevOps,
-        Docker, Kubernetes, Terraform, en canales como Platzi, EventoGX, Chema Alonso, Pablo Fredrikson.</p>
-    </blockquote>
-
-    <hr>
-
-    <h3 id="ExperienciaLaboral"><i class="fas fa-briefcase"></i> 2 - Experiencia Laboral</h3>
-
-    <table >
-      <thead>
-        <tr>
-          <th>Período</th>
-          <th>Empresa</th>
-          <th>Cargo</th>
-          <th>Descripción del Cargo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1995 – 1996</td>
-          <td>Metalúrgica Espacio 2003</td>
-          <td>Auxiliar Administrativo</td>
-          <td>Atención telefónica, tareas administrativas, liquidación de sueldos</td>
-        </tr>
-        <tr>
-          <td>1996 – 1998</td>
-          <td>Instituto Megasoft</td>
-          <td>Docente</td>
-          <td>Docente de Operador PC y Programación Visual Basic y C++</td>
-        </tr>
-        <tr>
-          <td>1999 – 2001</td>
-          <td>Monte Cúdine</td>
-          <td>Auxiliar de Centro de Cómputos</td>
-          <td>Tareas administrativas, soporte informático, y desarrollo con GeneXus 6.1</td>
-        </tr>
-        <tr>
-          <td>2001 – 2004</td>
-          <td>BCN Informática</td>
-          <td>Analista Programador</td>
-          <td>Desarrollo, Soporte y Consultoría trabajando con GX en varios productos (G-Mant, Paulya, Sistema
-            personalizado de General Motors Uruguay)</td>
-        </tr>
-        <tr>
-          <td>2004 – 2009</td>
-          <td>Datalogic Ingenieros</td>
-          <td>Desarrollador y Lider Técnico</td>
-          <td>Depto. Desarrollo de Sistema de Sueldos GIRH con Herramienta GeneXus 7.0, 8.0, 9.0 y X</td>
-        </tr>
-        <tr>
-          <td>2009 – 2010</td>
-          <td>Dynatech</td>
-          <td>Desarrollador</td>
-          <td>Desarrollo de Producto Financiero para Casas de Cambio. GX X Ev1</td>
-        </tr>
-        <tr>
-          <td>2010 – 2014</td>
-          <td>Cooperativa Policial de Ahorro y Crédito (COPAC)</td>
-          <td>Analista de Sistemas</td>
-          <td>Análisis, Diseño, Desarrollo, Testing y Mantenimiento del software principal de Gestión Financiera de la
-            Cooperativa. GX 9 y GX Ev2</td>
-        </tr>
-        <tr>
-          <td>2015 – 2019</td>
-          <td>Redpagos Casa Central</td>
-          <td>Analista Senior Nivel 1</td>
-          <td>Área de Proyectos – Proyectos WEB – MicroServicios – Procesos Batch y BackOffice Web – DevOps - GX Ev2 -
-            GX 16</td>
-        </tr>
-        <tr>
-          <td>2019 - Presente</td>
-          <td>Sodexo Benefits &amp; Rewards</td>
-          <td>Coordinador de Desarrollo</td>
-          <td>Encargado de Desarrollo - Scrum Master - Desarrollo Core Sistema - Backend - Gestión de Proyectos</td>
-        </tr>
-      </tbody>
-    </table>
-
-
-
-    <hr>
-  
-    <h4 id="Habilidades"><i class="fas fa-award"></i>  Habilidades</h4>
-    </section>
-
-
-    <!-- Sección de Habilidades Blandas ---------------------------------------------------------------------------->
-    <section>
-      <script type="text/javascript" src="./public/TagCloud.min.js"></script>
-  
-      <table align="center" cellspacing="4" cellpadding="20">
-        <tr>
-          <td>
-            <div class="container">
-              <div class="contenedorHabilidades col-sm">
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-  
-      <script>
-        var texts = [
-          'Responsable', 'Proactivo', 'Comprometido',
-          'Pragmático', 'Trabajo en Equipo', 'Orientado al Cliente', 'Autodidacta',
-          'Rápido Aprendizaje', 'A la vanguardia tecnológica', 'Organizado', 
-        ];
-        var options = { radius: 250, maxSpeed: 'slow' };
-        var tc = TagCloud('.contenedorHabilidades', texts, options);
-      </script> 
-    </section>
-
-    <section class="main-content">
-    <hr>
-
-    <h4 id="herramientas"><i class="fas fa-wrench"></i>  Herramientas</h4>
-    </section>
-
-
-
-    <!-- Sección de Herramientas ---------------------------------------------------------------------------->
-    <section>
-    <script type="text/javascript" src="./public/TagCloud.min.js"></script>
-
-    <table align="center" cellspacing="10" cellpadding="20">
-      <tr>
-        <td>
-          <div class="container">
-            <div class="contenedorLenguajesProgramacion col-sm">
-              <h4  style="color:#8892b0">Lenguajes de Programación</h4>
-            </div>
-          </div>
-        </td>
-        <td width="50px">
-        </td>
-        <td>
-          <div class="container">
-            <div class="contenedorBD col-sm">
-              <h4  style="color:#8892b0">Sistemas Operativos y BD</h4>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </table>
-    
-    <hr/>
-
-    <table align="center" cellspacing="4" cellpadding="20">
-      <tr>
-        <td align="center">
-          <div class="container">
-            <div class="contenedorTecnologiasWeb col-sm">
-              <h4  style="color:#8892b0">Tecnologías WEB</h4>
-            </div>
-          </div>
-        </td>
-        <td width="50px">
-        </td>
-        <td align="center">
-          <div class="container">
-            <div class="contenedorDevOps col-sm">
-              <h4  style="color:#8892b0">Herramientas Ágiles</h4>
-            </div>
-          </div>    
-        </td>
-      </tr>
-    </table>
-
-
-    <script>
-      var texts = [
-        'GeneXus 17', 'Python', 'JavaScript',
-        'Node.JS', 'React.JS', '.NET', '.NET Core', 'Visual Basic',
-        'C', 'C++', 'Visual FoxPro', 'NetBeans', 'Eclipse', 'VS Code'
-      ];
-      var options = { radius: 150, maxSpeed: 'slow' };
-      var tc = TagCloud('.contenedorLenguajesProgramacion', texts, options);
-    </script>
-    <script>
-      var texts = [
-        'HTML5', 'CSS3', 'ES6',
-        'JavaScript', 'REST', 'SOAP', 'JQuery',
-        'Bootstrap', 'IIS', 'Tomcat', 'OAuth 2',
-        'OIDC', 'ReadyAPI', 'Postman', 'SOAPUI',
-      ];
-      var options = { radius: 150, maxSpeed: 'slow' };
-      var tc = TagCloud('.contenedorTecnologiasWeb', texts, options);
-    </script>
-    <script>
-      var texts = [
-        'Jenkins', 'TravisCI', 'SCRUM', 'Mantis', 'Trello',
-        'XP', 'Lean', 'Ansible', 'Docker',
-        'Kubernetes', 'Docker Compose', 'Docker Swarm',
-        'Azure', 'Heroku', 'Git', 'GitHub', 'SubVersion',
-        'Jira', 'GXServer',
-      ];
-      var options = { radius: 150, maxSpeed: 'slow' };
-      var tc = TagCloud('.contenedorDevOps', texts, options);
-    </script>
-    <script>
-      var texts = [
-        'SQL Server', 'Oracle', 'DB2', 'Kali',
-        'Informix', 'MySQL', 'MongoDB', 'Postgres', 'Windows Server', 'Ubuntu',
-      ];
-      var options = { radius: 150, maxSpeed: 'slow' };
-      var tc = TagCloud('.contenedorBD', texts, options);
-    </script>
-    </section>
-
-
-    <section class="main-content">
-    <hr>
-
-    <h3 id="3---referencias-laborales-y-personales">3 - Referencias Laborales y Personales</h3>
-
-    <h4 id="ReferenciasLaborales"><i class="fas fa-user-friends"></i> 3.1 Referencias Laborales</h4>
-
-    <h5 id="juan-larrayoz"><strong>Juan Larrayoz</strong></h5>
-
-    <blockquote>
-      <p>Jefe de IT - Redpagos<br>
-        <i class="fas fa-envelope"></i> jlarrayoz@redpagos.com.uy<br>
-        <i class="fas fa-mobile-alt"></i> 099 744 438</p>
-    </blockquote>
-
-    <h5 id="psc-alain-montero"><strong>PSC Alain Montero</strong></h5>
-
-    <blockquote>
-      <p>Gerente de RRHH – COPAC<br>
-        Actualmente Director de Areté - Instituto Uruguayo de Coaching<br>
-        <i class="fas fa-globe"></i> https://www.espacioarete.com/<br>
-        <i class="fas fa-mobile-alt"></i> 099 402 177</p>
-    </blockquote>
-
-    <h5 id="ing-gustavo-ferreiro"><strong>Ing. Gustavo Ferreiro</strong></h5>
-
-    <blockquote>
-      <p>Socio Director - Datalogic Software<br>
-        <i class="fas fa-envelope"></i> g.ferreiro@datalogic.com.uy<br>
-        <i class="fas fa-globe"></i> https://datalogic.com.uy/<br>
-        <i class="fas fa-mobile-alt"></i> 2419 36 21</p>
-    </blockquote>
-
-    <h6 id="as-carlos-lobato"><strong>A/S Carlos Lobato</strong></h6>
-
-    <blockquote>
-      <p>Jefe de Sistemas - Monte Cúdine<br>
-        <i class="fas fa-envelope"></i> lobato.alberti@gmail.com<br>
-        <i class="fas fa-mobile-alt"></i> 096716822</p>
-    </blockquote>
-
-    <h5 id="ap-tomás-casella"><strong>A/P Tomás Casella</strong></h5>
-
-    <blockquote>
-      <p>Jefe de Desarrollo – BCN Informática<br>
-        <i class="fas fa-envelope"></i> tcasella@bcn.com.uy<br>
-        <i class="fas fa-mobile-alt"></i> 2707 73 34</p>
-    </blockquote>
-
-    <hr>
-
-
-
-
-    <h4 id="ReferenciasPersonales"><i class="fas fa-users"></i> 3.2 Referencias Personales</h4>
-
-    <h5 id="as-gustavo-barca"><strong>A/S Gustavo Barca</strong></h5>
-
-    <blockquote>
-      <p>Compañero de trabajos Freelance para Macro Mercado y Univ.Católica<br>
-        <i class="fas fa-envelope"></i> gbarca@macromercado.com.uy<br>
-        <i class="fas fa-mobile-alt"></i> 099 100 507</p>
-    </blockquote>
-
-    <h5 id="lic-josé-osta"><strong>Lic. José Osta</strong></h5>
-
-    <blockquote>
-      <p>Compañero de trabajo en Datalogic Software, actualmente en La Española<br>
-        <i class="fas fa-envelope"></i> joseosta@gmail.com<br>
-        <i class="fas fa-mobile-alt"></i> 099 074 767</p>
-    </blockquote>
-
-    <h5 id="ing-mauricio-rinaldi"><strong>Ing. Mauricio Rinaldi</strong></h5>
-
-    <blockquote>
-      <p>Parlamento del Mercosur<br>
-        <i class="fas fa-envelope"></i> mrinaldi@parlamentodelmercosur.org<br>
-        <i class="fas fa-mobile-alt"></i> 099 268 071</p>
-    </blockquote>
-
-    <h5 id="as-cristian-binaghi"><strong>A/S Cristian Binaghi</strong></h5>
-
-    <blockquote>
-      <p>Country Manager at Epidata Uruguay<br>
-        <i class="fas fa-envelope"></i> bhgp@hotmail.com<br>
-        <i class="fas fa-mobile-alt"></i> 092 498 777</p>
-    </blockquote>
-
-    <h5 id="carlos-rodríguez"><strong>Carlos Rodríguez</strong></h5>
-
-    <blockquote>
-      <p>Técnico en Electroelectrónica en Casinos del Estado<br>
-        <i class="fas fa-envelope"></i> carlos.rodriguez@casinos.gub.uy<br>
-        <i class="fas fa-mobile-alt"></i> 099 585 729</p>
-    </blockquote>
-
-    <footer class="site-footer">
-      <span class="site-footer-owner"><a
-          href="https://github.com/Scaldy/Marcelo-Scaldaferro-CV">Marcelo-Scaldaferro-CV</a> is maintained by <a
-          href="https://github.com/Scaldy">Scaldy</a>.</span>
-
-      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com/">GitHub
-          Pages</a>.</span>
-    </footer>
-  </section>
-
-</body>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+
+		<!-- FONT AWESOME ------------------------------------------------------------------------------------>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+			integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+			crossorigin="anonymous"
+		/>
+
+		<!-- ANIMATE.CSS ------------------------------------------------------------------------------------->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#157878" />
+		<link rel="stylesheet" href="./public/style.css" />
+
+		<style>
+			html body {
+				min-height: 100%;
+				background-image: url(bg.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-attachment: fixed;
+			}
+
+			body {
+				font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+				text-align: left;
+				background: #0a192f;
+				color: #fff;
+			}
+
+			.light {
+				background: #666;
+				color: #fff;
+			}
+
+			.content .tagcloud {
+				display: inline-block;
+				margin: 20px;
+			}
+
+			ul {
+				display: inline-block;
+			}
+
+			a {
+				color: #cacfdd;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: none;
+			}
+
+			.tagcloud {
+				font-size: 20px;
+				color: #fff;
+			}
+
+			.tagcloud--item {
+				padding: 2px 4px;
+				background-color: transparent;
+				border: 1px solid transparent;
+				cursor: pointer;
+			}
+
+			.tagcloud--item:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+				border: 1px solid #333;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+				opacity: 1 !important;
+				z-index: 100 !important;
+			}
+
+			.light .tagcloud--item {
+				color: #fff;
+			}
+
+			.light .tagcloud--item:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+				border: 1px solid #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<div class="container p-2">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="#SobreMi" class="nav-link">
+								<i class="fas fa-address-card"></i> Acerca de mí</a
+							>
+						</li>
+						<li class="nav-item">
+							<a href="#FormacionAcademica" class="nav-link">
+								<i class="fas fa-university"></i> Formación</a
+							>
+						</li>
+						<li class="nav-item">
+							<a href="#ExperienciaLaboral" class="nav-link">
+								<i class="fas fa-briefcase"></i> Experiencia</a
+							>
+						</li>
+						<li class="nav-item">
+							<a href="#Habilidades" class="nav-link">
+								<i class="fas fa-award"></i> Habilidades</a
+							>
+						</li>
+						<li class="nav-item">
+							<a href="#ReferenciasLaborales" class="nav-link">
+								<i class="fas fa-user-friends"></i> Referencias</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								href="https://github.com/Scaldy "
+								target="_blank"
+								class="nav-link"
+								><i class="fab fa-github"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/marcelo-scaldaferro"
+								target="_blank"
+								class="nav-link"
+								><i class="fab fa-linkedin"></i
+							></a>
+						</li>
+						<li>
+							<a href="#MailMS" class="nav-link"
+								><i class="fas fa-envelope"></i
+							></a>
+						</li>
+						<li>
+							<a href="#TelMS" class="nav-link"><i class="fas fa-phone"></i></a>
+						</li>
+						<li>
+							<a
+								href="https://www.facebook.com/mscaldaferro/"
+								target="_blank"
+								class="nav-link"
+								><i class="fab fa-facebook"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="https://www.instagram.com/marceloscaldaferro"
+								target="_blank"
+								class="nav-link"
+								><i class="fab fa-instagram"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="https://twitter.com/MScaldaferro"
+								target="_blank"
+								class="nav-link"
+								><i class="fab fa-twitter"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+
+		<section class="main-content">
+			<script type="text/javascript" src="./public/TagCloud.min.js"></script>
+			<br />
+
+			<div class="row">
+				<div class="col-6">
+					<p align="left" class="parrafo">
+						<img
+							class="rounded w-auto animated jackInTheBox"
+							src="./public/DeBrazosCruzadosSmall.png"
+							alt="Marcelo Scaldaferro"
+						/>
+					</p>
+
+					<br />
+
+					<p
+						style="
+							color: #64ffda;
+							font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
+						"
+					>
+						Hola, mi nombre es
+					</p>
+
+					<strong>
+						<p
+							style="
+								line-height: 60%;
+								color: #cacfdd;
+								font-style: bold;
+								font-family: Calibre, San Francisco, SF Pro Text, -apple-system,
+									system-ui, sans-serif;
+								font-size: 30pt;
+							"
+							class="parrafo"
+						>
+							Marcelo Scaldaferro.
+						</p>
+						<p
+							style="
+								color: #8892b0;
+								font-style: bold;
+								font-family: Calibre, San Francisco, SF Pro Text, -apple-system,
+									system-ui, sans-serif;
+								font-size: 20pt;
+							"
+						>
+							Soy Software Builder
+						</p>
+					</strong>
+				</div>
+				<div class="contenedorTitulos col-6"></div>
+				<script>
+					var texts = [
+						"Licenciado en Sistemas",
+						"Analista Senior GX",
+						"Hacker Ético",
+						"SCRUM Master",
+						"DevOps Engineer",
+						"Web Backend Developer",
+						"Systems Architect",
+						"Agile Developer",
+					];
+					var options = { radius: 230, maxSpeed: "slow" };
+					var tc = TagCloud(".contenedorTitulos", texts, options);
+				</script>
+			</div>
+
+			<br />
+
+			<p>
+				Soy Licenciado en Sistemas de Información, egresado de Universidad ORT,
+				vivo con mi familia en Montevideo, soy Analista Senior GeneXus con
+				muchos años de experiencia, y me apasiona el mundo de las herramientas
+				ágiles y cultura DevOps.
+			</p>
+			<br />
+			<br />
+			<br />
+
+			<hr />
+
+			<p>
+				<i class="fas fa-calendar"></i> Fecha de Nacimiento: 15/10/1976 (44
+				años)
+			</p>
+
+			<p><i class="fas fa-id-card"></i> Cédula de Identidad: 4.163.178 -5</p>
+
+			<p>
+				<i class="fas fa-map-marker-alt"></i> Domicilio: Yaguarón 2015, Aguada.
+			</p>
+
+			<p><i class="fas fa-home"></i> Situación Familiar: Casado, 2 hijos.</p>
+
+			<p id="TelMS">
+				<i class="fas fa-phone"></i> Tel: 2925 42 31
+				<i class="fas fa-mobile-alt"></i> Cel: 099 794 774
+			</p>
+
+			<p id="MailMS">
+				<i class="fas fa-envelope"></i> Email:
+				<a
+					href="https://scaldy.github.io/Marcelo-Scaldaferro-CV/marceloscaldaferro@hotmail.com"
+					>marceloscaldaferro@hotmail.com</a
+				>
+			</p>
+
+			<p>
+				<i class="fab fa-linkedin"></i> Linkedin:
+				<a href="https://www.linkedin.com/in/marcelo-scaldaferro"
+					>https://www.linkedin.com/in/marcelo-scaldaferro</a
+				>
+			</p>
+
+			<p>
+				<i class="fab fa-github"></i> Github:
+				<a href="https://github.com/Scaldy">https://github.com/Scaldy</a>
+			</p>
+
+			<hr />
+
+			<!-- Sobre mí ------------------------------------------------------------------------------->
+			<h4 id="SobreMi"><i class="fas fa-address-card"></i> Acerca de mí</h4>
+
+			<p>
+				Me siento un profesional en constante formación, un fiel estudiante y
+				aprendiz de Tecnología. Soy experto en algunas áreas técnicas, y un
+				apasionado aprendiz en otras. Alguien en constante evolución, que
+				aprende día a día como pasar de ser experto a ejecutivo.
+			</p>
+
+			<p>
+				Soy Licenciado en Sistemas de Información, me desempeño como Analista
+				Senior GeneXus desde hace más de 20 años. Experiencia en todos los
+				generadores, bases de datos y versiones, principal experiencia en
+				generador Web Java – GX 17 en el desarrollo de APIs de microservicios
+				web y procesos batch.
+			</p>
+
+			<p>
+				Aplico buenas prácticas adquiridas en la formación académica y en la
+				experiencia profesional.
+			</p>
+
+			<p>
+				Tengo excelente desempeño en análisis y diseño, metódico en todo el
+				proceso de ingeniería del software, sobre todo en metodologías ágiles
+				(SCRUM, XP y KANBAN) y en los últimos tiempos incorporando prácticas de
+				DEVOPS, particularmente me interesa el uso de herramientas ágiles que
+				ayudan a mejorar la productividad y mejoran la calidad del software.
+			</p>
+
+			<p>
+				Mis Valores:<br />
+				Trabajo en Equipo. Colaboración. Transparencia. Orden. Organización.
+				Compromiso. Responsabilidad.
+			</p>
+
+			<p>
+				Habilidades principales:<br />
+				Autodidacta. Investigación. Al día con la Tecnología. Colaborativo.
+				Rápido Aprendizaje. Empático.
+			</p>
+
+			<p>Intereses Principales:</p>
+
+			<ul>
+				<li><i class="fas fa-sitemap"></i> Arquitectura de Sistemas</li>
+				<li><i class="fas fa-user-graduate"></i> Ingeniería de Software</li>
+				<li><i class="fas fa-running"></i> Metodologías Ágiles.</li>
+				<li><i class="fas fa-infinity"></i> DevOps</li>
+				<li><i class="fas fa-user-shield"></i> Hacking Ético</li>
+			</ul>
+
+			<br />
+
+			<hr />
+
+			<h3 id="FormacionAcademica">
+				<i class="fas fa-university"></i> 1 – Formación Académica
+			</h3>
+
+			<!--table class="tablaCustomizada table table-striped table-dark"-->
+			<table>
+				<thead>
+					<tr>
+						<th>Nivel</th>
+						<th>Institución</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Primaria</strong></td>
+						<td>Colegio Nuestra Señora del Carmen</td>
+					</tr>
+					<tr>
+						<td><strong>Ciclo Básico</strong></td>
+						<td>Colegio y Liceo Adoratrices</td>
+					</tr>
+					<tr>
+						<td><strong>Bachillerato</strong></td>
+						<td>Opción Ingeniería. Liceo Nº 2 Héctor Miranda</td>
+					</tr>
+					<tr>
+						<td><strong>Terciaria</strong></td>
+						<td><strong>Ingeniería en Computación</strong> – UDELAR</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>Hasta 2do año cursado. 1996 – 1997</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+							<strong>Analista de Sistemas en Computación</strong> – Universidad
+							ORT
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>Título Intermedio de Licenciatura – 1998 – 2001</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+							<strong>Licenciado en Sistemas de Información</strong> –
+							Universidad ORT
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>Promedio Acumulado de Calificaciones 93% - 2006 – 2010</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+							<strong>Inglés Nivel Intermedio Completo</strong> - Alianza
+							Uruguay EEUU
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>2 años - 2011-2012</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+							<strong>Hacking Ético y Gestión de Incidentes</strong> -
+							Universidad ORT
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>6 meses - 2019</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr />
+
+			<h4 id="11-formación-en-genexus">
+				<i class="fas fa-file-code"></i> 1.1 Formación en GeneXus
+			</h4>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Curso</th>
+						<th>Institución</th>
+						<th>Duración</th>
+						<th>Año</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Analista GeneXus 6.1</td>
+						<td>Artech</td>
+						<td>6 semanas</td>
+						<td>2000</td>
+					</tr>
+					<tr>
+						<td>Certificado VII Encuentro Técnico GeneXus Alliance</td>
+						<td>Artech</td>
+						<td>2 días</td>
+						<td>2002</td>
+					</tr>
+					<tr>
+						<td>Certificado VIII Encuentro Técnico GeneXus Alliance</td>
+						<td>Artech</td>
+						<td>2 días</td>
+						<td>2003</td>
+					</tr>
+					<tr>
+						<td>Actualización GeneXus 9.0</td>
+						<td>Artech – LATU</td>
+						<td>5 días</td>
+						<td>2007</td>
+					</tr>
+					<tr>
+						<td>Taller de K2B Tools</td>
+						<td>GeneXus Consulting</td>
+						<td>2 días</td>
+						<td>2009</td>
+					</tr>
+					<tr>
+						<td>Actualización GeneXus X Ev.1</td>
+						<td>Artech – LATU</td>
+						<td>5 días</td>
+						<td>2010</td>
+					</tr>
+					<tr>
+						<td>Curso de GXPlorer – Business Intelligence</td>
+						<td>Artech – LATU</td>
+						<td>5 días</td>
+						<td>2011</td>
+					</tr>
+					<tr>
+						<td>Curso de GXFlow – Business Process Modeler</td>
+						<td>Artech – LATU</td>
+						<td>5 días</td>
+						<td>2011</td>
+					</tr>
+					<tr>
+						<td>Actualización GeneXus X Ev.2</td>
+						<td>Artech – LATU</td>
+						<td>5 días</td>
+						<td>2012</td>
+					</tr>
+					<tr>
+						<td>Taller de GXTest y GXUnit</td>
+						<td>Artech – Abstracta</td>
+						<td>2 días</td>
+						<td>2013</td>
+					</tr>
+					<tr>
+						<td>Taller de SmartDevices con GXEv3</td>
+						<td>Artech - LATU</td>
+						<td>3 días</td>
+						<td>2014</td>
+					</tr>
+					<tr>
+						<td>Taller de Arquitectura de API WEB</td>
+						<td>GeneXus - G.Canedo</td>
+						<td>8 días</td>
+						<td>2016</td>
+					</tr>
+					<tr>
+						<td>Analista GeneXus Senior Ev 3</td>
+						<td>GeneXus – Calif.: 97%</td>
+						<td>Examen</td>
+						<td>2016</td>
+					</tr>
+					<tr>
+						<td>Taller de GXServer 15</td>
+						<td>GeneXus – A.Piccardo</td>
+						<td>2 días</td>
+						<td>2017</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr />
+
+			<h4 id="12-talleres-de-formación-técnica-presenciales-y-online">
+				<i class="fas fa-graduation-cap"></i> 1.2 Talleres de Formación Técnica
+				(Presenciales y Online)
+			</h4>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Taller o Curso</th>
+						<th>Institución</th>
+						<th>Duración</th>
+						<th>Año</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Operador PC</td>
+						<td>Megasoft</td>
+						<td>3 meses</td>
+						<td>1998</td>
+					</tr>
+					<tr>
+						<td>Programador Visual (VB y Visual C++)</td>
+						<td>Megasoft</td>
+						<td>6 meses</td>
+						<td>1999</td>
+					</tr>
+					<tr>
+						<td>Administrador Windows NT 4.0</td>
+						<td>Infocorp</td>
+						<td>2 meses</td>
+						<td>1999</td>
+					</tr>
+					<tr>
+						<td>Taller de Jasper</td>
+						<td>Datalogic Ingenieros</td>
+						<td>5 jornadas</td>
+						<td>2007</td>
+					</tr>
+					<tr>
+						<td>Certificado en Testing para Desarrolladores</td>
+						<td>CES</td>
+						<td>8 días</td>
+						<td>2015</td>
+					</tr>
+					<tr>
+						<td>Workshop de Stack ELK (Elastic Search, Logstash y Kibana)</td>
+						<td>Atos</td>
+						<td>1 día</td>
+						<td>2017</td>
+					</tr>
+					<tr>
+						<td>Agile Developer</td>
+						<td>Peregrinus</td>
+						<td>2 días</td>
+						<td>2018</td>
+					</tr>
+					<tr>
+						<td>DEVOPS - Integración continua con JENKINS</td>
+						<td>Pablo Fredrikson</td>
+						<td>12 capítulos</td>
+						<td>2018</td>
+					</tr>
+					<tr>
+						<td>DEVOPS - Docker and Kubernetes</td>
+						<td>Pablo Fredrikson</td>
+						<td>19 capítulos</td>
+						<td>2018</td>
+					</tr>
+					<tr>
+						<td>Curso Básico de Jenkins</td>
+						<td>Platzi.com</td>
+						<td>15 capítulos</td>
+						<td>2018</td>
+					</tr>
+					<tr>
+						<td>Curso de POSTMAN</td>
+						<td>Platzi.com</td>
+						<td>15 capítulos</td>
+						<td>2018</td>
+					</tr>
+					<tr>
+						<td>Training Azure DevOps</td>
+						<td>Epidata Argentina</td>
+						<td>1 día</td>
+						<td>2019</td>
+					</tr>
+					<tr>
+						<td>Azure Fundamentals</td>
+						<td>Sodexo BRS</td>
+						<td>2 días</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Azure Administrator</td>
+						<td>Sodexo BRS</td>
+						<td>30 horas</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Curso de API REST</td>
+						<td>Platzi.com</td>
+						<td>18 capítulos</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Curso de Autenticación con OAuth 2.0 y OIDC</td>
+						<td>Platzi.com</td>
+						<td>38 capítulos</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Curso de ASP .NET Core</td>
+						<td>Platzi.com</td>
+						<td>35 capítulos</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Curso Profesional de GIT y GITHUB</td>
+						<td>Platzi.com</td>
+						<td>42 capítulos</td>
+						<td>2021</td>
+					</tr>
+					<tr>
+						<td>Curso Profesional de Arquitectura de Software</td>
+						<td>Platzi.com</td>
+						<td>43 capítulos</td>
+						<td>2021</td>
+					</tr>
+					<tr>
+						<td>Curso de Travis CI</td>
+						<td>Platzi.com</td>
+						<td>15 capítulos</td>
+						<td>2021</td>
+					</tr>
+					<tr>
+						<td>Curso de Fundamentos de Docker</td>
+						<td>Platzi.com</td>
+						<td>25 capítulos</td>
+						<td>2021</td>
+					</tr>
+					<tr>
+						<td>Curso de Arquitectura para Aplicaciones con Docker</td>
+						<td>Platzi.com</td>
+						<td>48 capítulos</td>
+						<td>2021</td>
+					</tr>
+					<tr>
+						<td>Curso Básico de Node.JS</td>
+						<td>Platzi.com</td>
+						<td>35 capítulos</td>
+						<td>2021</td>
+					</tr>
+					<tr>
+						<td>Curso de React.JS</td>
+						<td>Platzi.com</td>
+						<td>37 capítulos</td>
+						<td>2021</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr />
+
+			<h4 id="13-talleres-de-formación-no-técnica-y-en-gestión">
+				<i class="fas fa-tasks"></i> 1.3 Talleres de Formación No Técnica y en
+				Gestión
+			</h4>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Taller o Curso</th>
+						<th>Institución</th>
+						<th>Duración</th>
+						<th>Año</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							Taller de Herramientas Básicas para Gestión de Calidad y
+							certificación ISO 9001
+						</td>
+						<td>Monte Cúdine</td>
+						<td>3 días</td>
+						<td>2000</td>
+					</tr>
+					<tr>
+						<td>Taller de los 7 Hábitos de personas altamente efectivas</td>
+						<td>Franklin Covey</td>
+						<td>5 días</td>
+						<td>2008</td>
+					</tr>
+					<tr>
+						<td>SCRUM Master</td>
+						<td>Scrum.org</td>
+						<td>1 mes</td>
+						<td>2011</td>
+					</tr>
+					<tr>
+						<td>Taller de Liderazgo</td>
+						<td>COPAC</td>
+						<td>3 días</td>
+						<td>2013</td>
+					</tr>
+					<tr>
+						<td>Taller de Negociación</td>
+						<td>COPAC</td>
+						<td>2 días</td>
+						<td>2013</td>
+					</tr>
+					<tr>
+						<td>Taller de Acoso Laboral</td>
+						<td>Redpagos</td>
+						<td>1 día</td>
+						<td>2017</td>
+					</tr>
+					<tr>
+						<td>
+							Taller de Prevención de Lavado de Activos y Financiación del
+							Terrorismo
+						</td>
+						<td>RedPagos</td>
+						<td>2 días</td>
+						<td>2017</td>
+					</tr>
+					<tr>
+						<td>Taller de Metodología SCRUM</td>
+						<td>Peregrinus</td>
+						<td>2 días</td>
+						<td>2017</td>
+					</tr>
+					<tr>
+						<td>Taller de Prevención de Accidentes Laborales</td>
+						<td>Redpagos</td>
+						<td>1 día</td>
+						<td>2017</td>
+					</tr>
+					<tr>
+						<td>Mentoría SCRUM</td>
+						<td>Peregrinus</td>
+						<td>8 meses</td>
+						<td>2018</td>
+					</tr>
+					<tr>
+						<td>Curso para Líderes en Formación</td>
+						<td>Platzi.com</td>
+						<td>27 capítulos</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Taller de Trabajo Remoto</td>
+						<td>Sodexo BRS</td>
+						<td>1 jornada</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Curso de Trabajo Remoto o Teletrabajo</td>
+						<td>Platzi.com</td>
+						<td>24 capítulos</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Taller para Equipos de Trabajo Ágiles</td>
+						<td>Sodexo BRS</td>
+						<td>3 jornadas</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>WorkShop de Gestión del Cambio</td>
+						<td>Sodexo BRS</td>
+						<td>3 jornadas</td>
+						<td>2020</td>
+					</tr>
+					<tr>
+						<td>Curso de Liderazgo Creativo</td>
+						<td>Platzi.com</td>
+						<td>18 capítulos</td>
+						<td>2020</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr />
+
+			<blockquote>
+				<p>
+					Otros talleres, trainings, charlas, eventos, webinars, meetups, sobre
+					GX, Agile, OWASP, BlockChain, Azure Devops.
+				</p>
+			</blockquote>
+
+			<blockquote>
+				<p>
+					Aprendizaje en Youtube sobre GX, Seguridad, Linux, GitHub,
+					DataScience, AI, Bases de Datos NoSQL, DevOps, Docker, Kubernetes,
+					Terraform, en canales como Platzi, EventoGX, Chema Alonso, Pablo
+					Fredrikson.
+				</p>
+			</blockquote>
+
+			<hr />
+
+			<h3 id="ExperienciaLaboral">
+				<i class="fas fa-briefcase"></i> 2 - Experiencia Laboral
+			</h3>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Período</th>
+						<th>Empresa</th>
+						<th>Cargo</th>
+						<th>Descripción del Cargo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1995 – 1996</td>
+						<td>Metalúrgica Espacio 2003</td>
+						<td>Auxiliar Administrativo</td>
+						<td>
+							Atención telefónica, tareas administrativas, liquidación de
+							sueldos
+						</td>
+					</tr>
+					<tr>
+						<td>1996 – 1998</td>
+						<td>Instituto Megasoft</td>
+						<td>Docente</td>
+						<td>Docente de Operador PC y Programación Visual Basic y C++</td>
+					</tr>
+					<tr>
+						<td>1999 – 2001</td>
+						<td>Monte Cúdine</td>
+						<td>Auxiliar de Centro de Cómputos</td>
+						<td>
+							Tareas administrativas, soporte informático, y desarrollo con
+							GeneXus 6.1
+						</td>
+					</tr>
+					<tr>
+						<td>2001 – 2004</td>
+						<td>BCN Informática</td>
+						<td>Analista Programador</td>
+						<td>
+							Desarrollo, Soporte y Consultoría trabajando con GX en varios
+							productos (G-Mant, Paulya, Sistema personalizado de General Motors
+							Uruguay)
+						</td>
+					</tr>
+					<tr>
+						<td>2004 – 2009</td>
+						<td>Datalogic Ingenieros</td>
+						<td>Desarrollador y Lider Técnico</td>
+						<td>
+							Depto. Desarrollo de Sistema de Sueldos GIRH con Herramienta
+							GeneXus 7.0, 8.0, 9.0 y X
+						</td>
+					</tr>
+					<tr>
+						<td>2009 – 2010</td>
+						<td>Dynatech</td>
+						<td>Desarrollador</td>
+						<td>
+							Desarrollo de Producto Financiero para Casas de Cambio. GX X Ev1
+						</td>
+					</tr>
+					<tr>
+						<td>2010 – 2014</td>
+						<td>Cooperativa Policial de Ahorro y Crédito (COPAC)</td>
+						<td>Analista de Sistemas</td>
+						<td>
+							Análisis, Diseño, Desarrollo, Testing y Mantenimiento del software
+							principal de Gestión Financiera de la Cooperativa. GX 9 y GX Ev2
+						</td>
+					</tr>
+					<tr>
+						<td>2015 – 2019</td>
+						<td>Redpagos Casa Central</td>
+						<td>Analista Senior Nivel 1</td>
+						<td>
+							Área de Proyectos – Proyectos WEB – MicroServicios – Procesos
+							Batch y BackOffice Web – DevOps - GX Ev2 - GX 16
+						</td>
+					</tr>
+					<tr>
+						<td>2019 - Presente</td>
+						<td>Sodexo Benefits &amp; Rewards</td>
+						<td>Coordinador de Desarrollo</td>
+						<td>
+							Encargado de Desarrollo - Scrum Master - Desarrollo Core Sistema -
+							Backend - Gestión de Proyectos
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr />
+
+			<h4 id="Habilidades"><i class="fas fa-award"></i> Habilidades</h4>
+		</section>
+
+		<!-- Sección de Habilidades Blandas ---------------------------------------------------------------------------->
+		<section>
+			<table align="center" cellspacing="4" cellpadding="20">
+				<tr>
+					<td>
+						<div class="container">
+							<div class="contenedorHabilidades col-sm"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<script>
+				var texts = [
+					"Responsable",
+					"Proactivo",
+					"Comprometido",
+					"Pragmático",
+					"Trabajo en Equipo",
+					"Orientado al Cliente",
+					"Autodidacta",
+					"Rápido Aprendizaje",
+					"A la vanguardia tecnológica",
+					"Organizado",
+				];
+				var options = { radius: 250, maxSpeed: "slow" };
+				var tc = TagCloud(".contenedorHabilidades", texts, options);
+			</script>
+		</section>
+
+		<section class="main-content">
+			<hr />
+
+			<h4 id="herramientas"><i class="fas fa-wrench"></i> Herramientas</h4>
+		</section>
+
+		<!-- Sección de Herramientas ---------------------------------------------------------------------------->
+		<section>
+			<script type="text/javascript" src="./public/TagCloud.min.js"></script>
+
+			<table align="center" cellspacing="10" cellpadding="20">
+				<tr>
+					<td>
+						<div class="container">
+							<div class="contenedorLenguajesProgramacion col-sm">
+								<h4 style="color: #8892b0">Lenguajes de Programación</h4>
+							</div>
+						</div>
+					</td>
+					<td width="50px"></td>
+					<td>
+						<div class="container">
+							<div class="contenedorBD col-sm">
+								<h4 style="color: #8892b0">Sistemas Operativos y BD</h4>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<hr />
+
+			<table align="center" cellspacing="4" cellpadding="20">
+				<tr>
+					<td align="center">
+						<div class="container">
+							<div class="contenedorTecnologiasWeb col-sm">
+								<h4 style="color: #8892b0">Tecnologías WEB</h4>
+							</div>
+						</div>
+					</td>
+					<td width="50px"></td>
+					<td align="center">
+						<div class="container">
+							<div class="contenedorDevOps col-sm">
+								<h4 style="color: #8892b0">Herramientas Ágiles</h4>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<script>
+				var texts = [
+					"GeneXus 17",
+					"Python",
+					"JavaScript",
+					"Node.JS",
+					"React.JS",
+					".NET",
+					".NET Core",
+					"Visual Basic",
+					"C",
+					"C++",
+					"Visual FoxPro",
+					"NetBeans",
+					"Eclipse",
+					"VS Code",
+				];
+				var options = { radius: 150, maxSpeed: "slow" };
+				var tc = TagCloud(".contenedorLenguajesProgramacion", texts, options);
+			</script>
+			<script>
+				var texts = [
+					"HTML5",
+					"CSS3",
+					"ES6",
+					"JavaScript",
+					"REST",
+					"SOAP",
+					"JQuery",
+					"Bootstrap",
+					"IIS",
+					"Tomcat",
+					"OAuth 2",
+					"OIDC",
+					"ReadyAPI",
+					"Postman",
+					"SOAPUI",
+				];
+				var options = { radius: 150, maxSpeed: "slow" };
+				var tc = TagCloud(".contenedorTecnologiasWeb", texts, options);
+			</script>
+			<script>
+				var texts = [
+					"Jenkins",
+					"TravisCI",
+					"SCRUM",
+					"Mantis",
+					"Trello",
+					"XP",
+					"Lean",
+					"Ansible",
+					"Docker",
+					"Kubernetes",
+					"Docker Compose",
+					"Docker Swarm",
+					"Azure",
+					"Heroku",
+					"Git",
+					"GitHub",
+					"SubVersion",
+					"Jira",
+					"GXServer",
+				];
+				var options = { radius: 150, maxSpeed: "slow" };
+				var tc = TagCloud(".contenedorDevOps", texts, options);
+			</script>
+			<script>
+				var texts = [
+					"SQL Server",
+					"Oracle",
+					"DB2",
+					"Kali",
+					"Informix",
+					"MySQL",
+					"MongoDB",
+					"Postgres",
+					"Windows Server",
+					"Ubuntu",
+				];
+				var options = { radius: 150, maxSpeed: "slow" };
+				var tc = TagCloud(".contenedorBD", texts, options);
+			</script>
+		</section>
+
+		<section class="main-content">
+			<hr />
+
+			<h3 id="3---referencias-laborales-y-personales">
+				3 - Referencias Laborales y Personales
+			</h3>
+
+			<h4 id="ReferenciasLaborales">
+				<i class="fas fa-user-friends"></i> 3.1 Referencias Laborales
+			</h4>
+
+			<h5 id="juan-larrayoz"><strong>Juan Larrayoz</strong></h5>
+
+			<blockquote>
+				<p>
+					Jefe de IT - Redpagos<br />
+					<i class="fas fa-envelope"></i> jlarrayoz@redpagos.com.uy<br />
+					<i class="fas fa-mobile-alt"></i> 099 744 438
+				</p>
+			</blockquote>
+
+			<h5 id="psc-alain-montero"><strong>PSC Alain Montero</strong></h5>
+
+			<blockquote>
+				<p>
+					Gerente de RRHH – COPAC<br />
+					Actualmente Director de Areté - Instituto Uruguayo de Coaching<br />
+					<i class="fas fa-globe"></i> https://www.espacioarete.com/<br />
+					<i class="fas fa-mobile-alt"></i> 099 402 177
+				</p>
+			</blockquote>
+
+			<h5 id="ing-gustavo-ferreiro"><strong>Ing. Gustavo Ferreiro</strong></h5>
+
+			<blockquote>
+				<p>
+					Socio Director - Datalogic Software<br />
+					<i class="fas fa-envelope"></i> g.ferreiro@datalogic.com.uy<br />
+					<i class="fas fa-globe"></i> https://datalogic.com.uy/<br />
+					<i class="fas fa-mobile-alt"></i> 2419 36 21
+				</p>
+			</blockquote>
+
+			<h6 id="as-carlos-lobato"><strong>A/S Carlos Lobato</strong></h6>
+
+			<blockquote>
+				<p>
+					Jefe de Sistemas - Monte Cúdine<br />
+					<i class="fas fa-envelope"></i> lobato.alberti@gmail.com<br />
+					<i class="fas fa-mobile-alt"></i> 096716822
+				</p>
+			</blockquote>
+
+			<h5 id="ap-tomás-casella"><strong>A/P Tomás Casella</strong></h5>
+
+			<blockquote>
+				<p>
+					Jefe de Desarrollo – BCN Informática<br />
+					<i class="fas fa-envelope"></i> tcasella@bcn.com.uy<br />
+					<i class="fas fa-mobile-alt"></i> 2707 73 34
+				</p>
+			</blockquote>
+
+			<hr />
+
+			<h4 id="ReferenciasPersonales">
+				<i class="fas fa-users"></i> 3.2 Referencias Personales
+			</h4>
+
+			<h5 id="as-gustavo-barca"><strong>A/S Gustavo Barca</strong></h5>
+
+			<blockquote>
+				<p>
+					Compañero de trabajos Freelance para Macro Mercado y Univ.Católica<br />
+					<i class="fas fa-envelope"></i> gbarca@macromercado.com.uy<br />
+					<i class="fas fa-mobile-alt"></i> 099 100 507
+				</p>
+			</blockquote>
+
+			<h5 id="lic-josé-osta"><strong>Lic. José Osta</strong></h5>
+
+			<blockquote>
+				<p>
+					Compañero de trabajo en Datalogic Software, actualmente en La
+					Española<br />
+					<i class="fas fa-envelope"></i> joseosta@gmail.com<br />
+					<i class="fas fa-mobile-alt"></i> 099 074 767
+				</p>
+			</blockquote>
+
+			<h5 id="ing-mauricio-rinaldi"><strong>Ing. Mauricio Rinaldi</strong></h5>
+
+			<blockquote>
+				<p>
+					Parlamento del Mercosur<br />
+					<i class="fas fa-envelope"></i>
+					mrinaldi@parlamentodelmercosur.org<br />
+					<i class="fas fa-mobile-alt"></i> 099 268 071
+				</p>
+			</blockquote>
+
+			<h5 id="as-cristian-binaghi"><strong>A/S Cristian Binaghi</strong></h5>
+
+			<blockquote>
+				<p>
+					Country Manager at Epidata Uruguay<br />
+					<i class="fas fa-envelope"></i> bhgp@hotmail.com<br />
+					<i class="fas fa-mobile-alt"></i> 092 498 777
+				</p>
+			</blockquote>
+
+			<h5 id="carlos-rodríguez"><strong>Carlos Rodríguez</strong></h5>
+
+			<blockquote>
+				<p>
+					Técnico en Electroelectrónica en Casinos del Estado<br />
+					<i class="fas fa-envelope"></i> carlos.rodriguez@casinos.gub.uy<br />
+					<i class="fas fa-mobile-alt"></i> 099 585 729
+				</p>
+			</blockquote>
+
+			<footer class="site-footer">
+				<span class="site-footer-owner"
+					><a href="https://github.com/Scaldy/Marcelo-Scaldaferro-CV"
+						>Marcelo-Scaldaferro-CV</a
+					>
+					is maintained by <a href="https://github.com/Scaldy">Scaldy</a>.</span
+				>
+
+				<span class="site-footer-credits"
+					>This page was generated by
+					<a href="https://pages.github.com/">GitHub Pages</a>.</span
+				>
+			</footer>
+		</section>
+	</body>
 </html>

@@ -83,6 +83,25 @@ img {
     border: 0
 }
 
+.imagen {
+    transform: scale(1);
+}
+
+.imagen:hover {
+    transform: scale(1.5);
+}
+
+.parrafo {
+    transform: scale(1);
+    transition: 100ms;
+}
+
+.parrafo:hover {
+    transform: scale(1.03);
+    transition: 100ms;
+}
+
+
 svg:not(:root) {
     overflow: hidden
 }
