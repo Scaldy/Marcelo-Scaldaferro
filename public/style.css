@@ -12,6 +12,53 @@ body {
     color: #fff;
 }
 
+.diploma-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.diploma-principal div {
+    display: grid;
+    justify-content: center;
+}
+
+.diplomas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.diploma-container  {
+    margin-left: 10px;
+}
+
+.diploma-container p {
+    text-align:center;
+    color: #8892b0;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.diploma-principal p {
+    text-align:center;
+    color: #8892b0;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.diploma-container img {
+    width: 500px;
+    transform: scale(1);
+    transition: 100ms;
+}
+
+.diploma-container img:hover {
+    transform: scale(1.1);
+    transition: 100ms;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block
 }
@@ -97,7 +144,7 @@ img {
 }
 
 .parrafo:hover {
-    transform: scale(1.03);
+    transform: scale(1.08);
     transition: 100ms;
 }
 
