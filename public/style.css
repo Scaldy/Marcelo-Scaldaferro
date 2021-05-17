@@ -1,8 +1,9 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,600");
 html {
-    font-family: sans-serif;
+    font-family: Ubuntu, sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
@@ -41,16 +42,16 @@ body {
 .diploma-container p {
     text-align:center;
     color: #8892b0;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    font-family: Ubuntu, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: normal;
     font-size: 18px;
 }
 
 .diploma-principal p {
     text-align:center;
     color: #8892b0;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    font-family: Ubuntu, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: normal;
     font-size: 20px;
 }
 
@@ -183,7 +184,7 @@ pre {
 }
 
 code, kbd, pre, samp {
-    font-family: monospace, monospace;
+    font-family: Ubuntu, monospace, monospace;
     font-size: 1em
 }
 
@@ -548,7 +549,7 @@ td, th {
 body {
     padding: 0;
     margin: 0;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Ubuntu, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #fff
@@ -732,7 +733,7 @@ a:hover {
 
 .main-content code {
     padding: 2px 4px;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family: Ubuntu, Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9rem;
     color: #567482;
     background-color: #f3f6fa;
