@@ -843,6 +843,12 @@
 								<td>28 capítulos</td>
 								<td>2021</td>
 							</tr>
+							<tr>
+								<td>Curso de Angular</td>
+								<td>Platzi.com</td>
+								<td>56 capítulos</td>
+								<td>2021</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -1187,18 +1193,18 @@
 
 			<table align="center" cellspacing="10" cellpadding="20">
 				<tr>
-					<td>
+					<td align="center">
 						<div class="container">
-							<div class="contenedorLenguajesProgramacion col-sm">
-								<h4 style="color: #8892b0">Lenguajes de Programación</h4>
+							<div class="contenedorGeneXus col-sm">
+								<h4 style="color: #8892b0">GeneXus Experience</h4>
 							</div>
 						</div>
 					</td>
 					<td width="50px"></td>
-					<td>
+					<td align="center">
 						<div class="container">
-							<div class="contenedorBD col-sm">
-								<h4 style="color: #8892b0">Sistemas Operativos y BD</h4>
+							<div class="contenedorLenguajesProgramacion col-sm">
+								<h4 style="color: #8892b0">Programming Languages</h4>
 							</div>
 						</div>
 					</td>
@@ -1212,7 +1218,29 @@
 					<td align="center">
 						<div class="container">
 							<div class="contenedorTecnologiasWeb col-sm">
-								<h4 style="color: #8892b0">Tecnologías WEB</h4>
+								<h4 style="color: #8892b0">WEB Technologies</h4>
+							</div>
+						</div>
+					</td>
+					<td width="50px"></td>
+					<td align="center">
+						<div class="container">
+							<div class="contenedorJavaScript col-sm">
+								<h4 style="color: #8892b0">JavaScript Tools</h4>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<hr />
+
+			<table align="center" cellspacing="10" cellpadding="20">
+				<tr>
+					<td align="center">
+						<div class="container">
+							<div class="contenedorBD col-sm">
+								<h4 style="color: #8892b0">Operating Systems & DB Engine</h4>
 							</div>
 						</div>
 					</td>
@@ -1220,52 +1248,86 @@
 					<td align="center">
 						<div class="container">
 							<div class="contenedorDevOps col-sm">
-								<h4 style="color: #8892b0">Herramientas Ágiles</h4>
+								<h4 style="color: #8892b0">DevOps Tools</h4>
 							</div>
 						</div>
 					</td>
 				</tr>
 			</table>
 
+			
+
 			<script>
 				var texts = [
-					"GeneXus 17",
+					"GX 5.6 to GX 17",
+					"VB Win Generator",
+					"Visual Fox Pro Generator",
+					"C# Web Generator",
+					"CSQL Generator",
+					"Java Web Generator",
+					"GXPlorer Business Intelligence",
+					"GXFlow BPMN",
+					"Oracle",
+					"Informix", 
+					"DB2", 
+					"PostgreSQL", 
+					"SQLServer"
+				];
+				var options = { radius: 250, maxSpeed: "slow" };
+				var tc = TagCloud(".contenedorGeneXus", texts, options);
+			</script>
+			<script>
+				var texts = [
+					"GeneXus",
 					"Python",
 					"JavaScript",
-					"Node.JS",
-					"React.JS",
 					".NET",
-					".NET Core",
 					"Visual Basic",
 					"C",
 					"C++",
 					"Visual FoxPro",
-					"DJango",
 				];
-				var options = { radius: 200, maxSpeed: "slow" };
+				var options = { radius: 250, maxSpeed: "slow" };
 				var tc = TagCloud(".contenedorLenguajesProgramacion", texts, options);
 			</script>
 			<script>
 				var texts = [
 					"HTML5",
 					"CSS3",
-					"ES6",
 					"JavaScript",
 					"REST",
 					"SOAP",
-					"JQuery",
-					"Bootstrap",
 					"IIS",
-					"Tomcat",
-					"OAuth 2",
+					"Apache Tomcat",
+					"OAuth 2.0",
 					"OIDC",
 					"ReadyAPI",
 					"Postman",
 					"SOAPUI",
-					"Kafka",
+					"Apache Kafka",
 				];
-				var options = { radius: 200, maxSpeed: "slow" };
+				var options = { radius: 250, maxSpeed: "slow" };
 				var tc = TagCloud(".contenedorTecnologiasWeb", texts, options);
+			</script>
+			<script>
+				var texts = [
+					"ES6",
+					"JavaScript",
+					"TypeScript",
+					"Groovy",
+					"Node.JS",
+					"WebPack",
+					"Angular",
+					"React.JS",
+					"JQuery",
+					"VS Code",
+					"NPM",
+					"Bootstrap",
+					"Material Design",
+					"FlexBox"
+				];
+				var options = { radius: 250, maxSpeed: "slow" };
+				var tc = TagCloud(".contenedorJavaScript", texts, options);
 			</script>
 			<script>
 				var texts = [
@@ -1287,7 +1349,7 @@
 					"VS Code",
 					"StoriesOnBoard",
 				];
-				var options = { radius: 200, maxSpeed: "slow" };
+				var options = { radius: 250, maxSpeed: "slow" };
 				var tc = TagCloud(".contenedorDevOps", texts, options);
 			</script>
 			<script>
@@ -1300,10 +1362,11 @@
 					"MySQL",
 					"MongoDB",
 					"Postgres",
+					"Virtual Box",
 					"Windows Server",
 					"Ubuntu",
 				];
-				var options = { radius: 200, maxSpeed: "slow" };
+				var options = { radius: 250, maxSpeed: "slow" };
 				var tc = TagCloud(".contenedorBD", texts, options);
 			</script>
 		</section>
@@ -1707,6 +1770,12 @@
 					</diploma>
 				</div>
 
+				<div class="diplomas">
+					<diploma class="diploma-container">
+						<img src="./public/diploma-angular.jpg" alt="">
+						<p>Curso de Angular</p>
+					</diploma>
+				</div>
 
 			</section>
 
