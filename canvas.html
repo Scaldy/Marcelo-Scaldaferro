@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TagCanvas example</title>
+		<!--[if lt IE 9
+			]><script type="text/javascript" src="excanvas.js"></script
+		><![endif]-->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,600"
+		/>
+
+		<script src="tagcanvas.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			window.onload = function () {
+				try {
+					TagCanvas.Start("myCanvas", "tags", {
+						textColour: null,
+						outlineColour: "#64ffda",
+						reverse: true,
+						depth: 0.8,
+						maxSpeed: 0.05,
+						wheelZoom: false,
+						initial: [0.1, -0.1],
+						textFont: "Helvetica, Calibri",
+						fadeIn: 300,
+						splitWidth: 15,
+						textAlign: "centre",
+						textHeight: 16,
+						txtOpt: false,
+						weight: true,
+						weightFrom: "data-weight",
+						weightMode: "size",
+						weightMinSize: 1,
+						weightMaxSize: 10,
+					});
+				} catch (e) {
+					// something went wrong, hide the canvas container
+					document.getElementById("myCanvasContainer").style.display = "none";
+				}
+			};
+		</script>
+		<style>
+			html body {
+				min-height: 100%;
+				background-image: url(bg.jpg);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>TagCanvas example page</h1>
+		<div id="myCanvasContainer">
+			<canvas width="350" height="350" id="myCanvas">
+				<p>
+					Anything in here will be replaced on browsers that support the canvas
+					element
+				</p>
+			</canvas>
+		</div>
+		<div id="tags">
+			<ul>
+				<li>
+					<a style="color: rgb(118, 134, 224)" data-weight="16">ReadyAPI</a>
+				</li>
+				<li>
+					<a style="color: #64ffda" data-weight="20">Postman</a>
+				</li>
+				<li>
+					<a style="color: #64ffda" data-weight="20">SoapUI</a>
+				</li>
+				<li><a style="color: #64ffda" data-weight="20">REST</a></li>
+				<li><a style="color: #64ffda" data-weight="20">SOAP</a></li>
+				<li>
+					<a
+						class="TagGrande"
+						style="color: rgb(238, 155, 125)"
+						data-weight="12"
+						>OIDC</a
+					>
+				</li>
+				<li>
+					<a style="color: rgb(238, 155, 125)" data-weight="12">OAuth 2.0</a>
+				</li>
+				<li><a style="color: #64ffda" data-weight="20">HTML5</a></li>
+				<li><a style="color: rgb(118, 134, 224)" data-weight="16">CSS3</a></li>
+				<li><a style="color: #64ffda" data-weight="20">Apache Tomcat</a></li>
+				<li><a style="color: rgb(118, 134, 224)" data-weight="16">IIS</a></li>
+				<li>
+					<a style="color: rgb(238, 155, 125)" data-weight="12">Apache Kafka</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
