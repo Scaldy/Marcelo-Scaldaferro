@@ -2,19 +2,122 @@
 <html>
 	<head>
 		<title>TagCanvas example</title>
-		<!--[if lt IE 9
-			]><script type="text/javascript" src="excanvas.js"></script
-		><![endif]-->
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,600"
-		/>
+		<link rel="stylesheet" href="./public/style.css" />
 
-		<script src="tagcanvas.min.js" type="text/javascript"></script>
+		<script src="./public/tagcanvas.min.js" type="text/javascript"></script>
+
+		<style>
+			html body {
+				min-height: 100%;
+				background-image: url(bg.jpg);
+			}
+		</style>
+	</head>
+	<body>
 		<script type="text/javascript">
 			window.onload = function () {
 				try {
-					TagCanvas.Start("myCanvas", "tags", {
+					TagCanvas.Start("miCanvasGeneXus", "tagsGX", {
+						textColour: null,
+						outlineColour: "#64ffda",
+						reverse: true,
+						depth: 0.8,
+						maxSpeed: 0.05,
+						wheelZoom: false,
+						initial: [0.1, -0.1],
+						textFont: "Helvetica, Calibri",
+						fadeIn: 300,
+						splitWidth: 80,
+						textAlign: "centre",
+						textHeight: 16,
+						txtOpt: false,
+						weight: true,
+						weightFrom: "data-weight",
+						weightMode: "size",
+						weightMinSize: 1,
+						weightMaxSize: 10,
+					});
+					TagCanvas.Start("miCanvasLenguajesProgramacion", "tagsPL", {
+						textColour: null,
+						outlineColour: "#64ffda",
+						reverse: true,
+						depth: 0.8,
+						maxSpeed: 0.05,
+						wheelZoom: false,
+						initial: [0.1, -0.1],
+						textFont: "Helvetica, Calibri",
+						fadeIn: 300,
+						splitWidth: 15,
+						textAlign: "centre",
+						textHeight: 16,
+						txtOpt: false,
+						weight: true,
+						weightFrom: "data-weight",
+						weightMode: "size",
+						weightMinSize: 1,
+						weightMaxSize: 10,
+					});
+					TagCanvas.Start("miCanvasTecnologiasWeb", "tagsTW", {
+						textColour: null,
+						outlineColour: "#64ffda",
+						reverse: true,
+						depth: 0.8,
+						maxSpeed: 0.05,
+						wheelZoom: false,
+						initial: [0.1, -0.1],
+						textFont: "Helvetica, Calibri",
+						fadeIn: 300,
+						splitWidth: 15,
+						textAlign: "centre",
+						textHeight: 16,
+						txtOpt: false,
+						weight: true,
+						weightFrom: "data-weight",
+						weightMode: "size",
+						weightMinSize: 1,
+						weightMaxSize: 10,
+					});
+					TagCanvas.Start("miCanvasJavaScript", "tagsJS", {
+						textColour: null,
+						outlineColour: "#64ffda",
+						reverse: true,
+						depth: 0.8,
+						maxSpeed: 0.05,
+						wheelZoom: false,
+						initial: [0.1, -0.1],
+						textFont: "Helvetica, Calibri",
+						fadeIn: 300,
+						splitWidth: 15,
+						textAlign: "centre",
+						textHeight: 16,
+						txtOpt: false,
+						weight: true,
+						weightFrom: "data-weight",
+						weightMode: "size",
+						weightMinSize: 1,
+						weightMaxSize: 10,
+					});
+					TagCanvas.Start("miCanvasSODB", "tagsSODB", {
+						textColour: null,
+						outlineColour: "#64ffda",
+						reverse: true,
+						depth: 0.8,
+						maxSpeed: 0.05,
+						wheelZoom: false,
+						initial: [0.1, -0.1],
+						textFont: "Helvetica, Calibri",
+						fadeIn: 300,
+						splitWidth: 15,
+						textAlign: "centre",
+						textHeight: 16,
+						txtOpt: false,
+						weight: true,
+						weightFrom: "data-weight",
+						weightMode: "size",
+						weightMinSize: 1,
+						weightMaxSize: 10,
+					});
+					TagCanvas.Start("miCanvasDevOps", "tagsDO", {
 						textColour: null,
 						outlineColour: "#64ffda",
 						reverse: true,
@@ -36,59 +139,215 @@
 					});
 				} catch (e) {
 					// something went wrong, hide the canvas container
-					document.getElementById("myCanvasContainer").style.display = "none";
+					document.getElementById("miContainerGeneXus").style.display = "none";
 				}
 			};
 		</script>
-		<style>
-			html body {
-				min-height: 100%;
-				background-image: url(bg.jpg);
-			}
-		</style>
-	</head>
-	<body>
-		<h1>TagCanvas example page</h1>
-		<div id="myCanvasContainer">
-			<canvas width="350" height="350" id="myCanvas">
-				<p>
-					Anything in here will be replaced on browsers that support the canvas
-					element
-				</p>
-			</canvas>
-		</div>
-		<div id="tags">
+
+		<div id="tagsGX">
 			<ul>
-				<li>
-					<a style="color: rgb(118, 134, 224)" data-weight="16">ReadyAPI</a>
-				</li>
-				<li>
-					<a style="color: #64ffda" data-weight="20">Postman</a>
-				</li>
-				<li>
-					<a style="color: #64ffda" data-weight="20">SoapUI</a>
-				</li>
-				<li><a style="color: #64ffda" data-weight="20">REST</a></li>
-				<li><a style="color: #64ffda" data-weight="20">SOAP</a></li>
-				<li>
-					<a
-						class="TagGrande"
-						style="color: rgb(238, 155, 125)"
-						data-weight="12"
-						>OIDC</a
-					>
-				</li>
-				<li>
-					<a style="color: rgb(238, 155, 125)" data-weight="12">OAuth 2.0</a>
-				</li>
-				<li><a style="color: #64ffda" data-weight="20">HTML5</a></li>
-				<li><a style="color: rgb(118, 134, 224)" data-weight="16">CSS3</a></li>
-				<li><a style="color: #64ffda" data-weight="20">Apache Tomcat</a></li>
-				<li><a style="color: rgb(118, 134, 224)" data-weight="16">IIS</a></li>
-				<li>
-					<a style="color: rgb(238, 155, 125)" data-weight="12">Apache Kafka</a>
-				</li>
+				<li><a class="TagGrande" data-weight="20">GX 5.6 to GX 17</a></li>
+				<li><a class="TagGrande" data-weight="20">VB Win Generator</a></li>
+				<li><a class="TagGrande" data-weight="20">VFPro Win Generator</a></li>
+				<li><a class="TagChico" data-weight="10">CSQL Generator</a></li>
+				<li><a class="TagGrande" data-weight="20">Java Web Generator</a></li>
+				<li><a class="TagGrande" data-weight="20">.NET Web Generator</a></li>
+				<li><a class="TagMediano" data-weight="16">GXplorer BI</a></li>
+				<li><a class="TagMediano" data-weight="16">GXFlow BPMN</a></li>
+				<li><a class="TagMediano" data-weight="16">Oracle</a></li>
+				<li><a class="TagChico" data-weight="10">Informix</a></li>
+				<li><a class="TagMediano" data-weight="16">DB2</a></li>
+				<li><a class="TagGrande" data-weight="20">SQL Server</a></li>
+				<li><a class="TagGrande" data-weight="20">PostgreSQL</a></li>
 			</ul>
 		</div>
+
+		<div id="tagsPL">
+			<ul>
+				<li><a class="TagChico" data-weight="10">Python</a></li>
+				<li><a class="TagGrande" data-weight="24">GeneXus</a></li>
+				<li><a class="TagGrande" data-weight="24">Visual Basic</a></li>
+				<li><a class="TagGrande" data-weight="24">JavaScript</a></li>
+				<li><a class="TagChico" data-weight="10">C</a></li>
+				<li><a class="TagChico" data-weight="10">Pascal</a></li>
+				<li><a class="TagMediano" data-weight="16">C#</a></li>
+				<li><a class="TagChico" data-weight="10">C++</a></li>
+				<li><a class="TagChico" data-weight="10">Cobol</a></li>
+				<li><a class="TagMediano" data-weight="16">Visual FoxPro</a></li>
+				<li><a class="TagGrande" data-weight="24">Java</a></li>
+			</ul>
+		</div>
+
+		<div id="tagsTW">
+			<ul>
+				<li><a class="TagChico" data-weight="10">ReadyAPI</a></li>
+				<li><a class="TagGrande" data-weight="24">Postman</a></li>
+				<li><a class="TagGrande" data-weight="24">SoapUI</a></li>
+				<li><a class="TagGrande" data-weight="24">REST</a></li>
+				<li><a class="TagGrande" data-weight="24">SOAP</a></li>
+				<li><a class="TagChico" data-weight="10">OIDC</a></li>
+				<li><a class="TagChico" data-weight="10">OAuth 2.0</a></li>
+				<li><a class="TagGrande" data-weight="24">HTML5</a></li>
+				<li><a class="TagGrande" data-weight="24">CSS3</a></li>
+				<li><a class="TagGrande" data-weight="24">Apache Tomcat</a></li>
+				<li><a class="TagMediano" data-weight="16">IIS</a></li>
+				<li><a class="TagChico" data-weight="10">Apache Kafka</a></li>
+			</ul>
+		</div>
+
+		<div id="tagsJS">
+			<ul>
+				<li><a class="TagChico" data-weight="10">EcmaScript</a></li>
+				<li><a class="TagGrande" data-weight="24">JavaScript</a></li>
+				<li><a class="TagMediano" data-weight="16">TypeScript</a></li>
+				<li><a class="TagChico" data-weight="10">Groovy</a></li>
+				<li><a class="TagGrande" data-weight="24">Node.JS</a></li>
+				<li><a class="TagMediano" data-weight="16">WebPack</a></li>
+				<li><a class="TagChico" data-weight="10">Chrome V8</a></li>
+				<li><a class="TagMediano" data-weight="16">Angular</a></li>
+				<li><a class="TagMediano" data-weight="16">React</a></li>
+				<li><a class="TagChico" data-weight="10">Ajax</a></li>
+				<li><a class="TagChico" data-weight="10">Web Sockets</a></li>
+				<li><a class="TagChico" data-weight="10">BootStrap</a></li>
+				<li><a class="TagMediano" data-weight="16">JQuery</a></li>
+				<li><a class="TagChico" data-weight="10">Material Design</a></li>
+				<li><a class="TagMediano" data-weight="16">Express</a></li>
+				<li><a class="TagChico" data-weight="10">FlexBox</a></li>
+			</ul>
+		</div>
+
+		<div id="tagsSODB">
+			<ul>
+				<li><a class="TagChico" data-weight="10">Informix</a></li>
+				<li><a class="TagMediano" data-weight="16">Oracle</a></li>
+				<li><a class="TagChico" data-weight="10">MongoDB</a></li>
+				<li><a class="TagChico" data-weight="10">Redis</a></li>
+				<li><a class="TagGrande" data-weight="24">Kali</a></li>
+				<li><a class="TagGrande" data-weight="24">Ubuntu</a></li>
+				<li><a class="TagChico" data-weight="10">Suse</a></li>
+				<li><a class="TagGrande" data-weight="24">VirtualBox</a></li>
+				<li><a class="TagGrande" data-weight="24">Windows Server</a></li>
+				<li><a class="TagChico" data-weight="10">DB2</a></li>
+				<li><a class="TagGrande" data-weight="24">SQL Server</a></li>
+				<li><a class="TagMediano" data-weight="16">PostgresSQL</a></li>
+			</ul>
+		</div>
+
+		<div id="tagsDO">
+			<ul>
+				<li><a class="TagChico" data-weight="10">StoriesOnBoard</a></li>
+				<li><a class="TagGrande" data-weight="24">SCRUM</a></li>
+				<li><a class="TagGrande" data-weight="24">Mantis</a></li>
+				<li><a class="TagGrande" data-weight="24">Trello</a></li>
+				<li><a class="TagChico" data-weight="10">Kanban</a></li>
+				<li><a class="TagChico" data-weight="10">Jira</a></li>
+				<li><a class="TagMediano" data-weight="16">Docker</a></li>
+				<li><a class="TagGrande" data-weight="10">Kubernetes</a></li>
+				<li><a class="TagChico" data-weight="10">Azure</a></li>
+				<li><a class="TagGrande" data-weight="24">GIT</a></li>
+				<li><a class="TagMediano" data-weight="16">TravisCI</a></li>
+				<li><a class="TagMediano" data-weight="16">SubVersion</a></li>
+				<li><a class="TagGrande" data-weight="24">GitHUB</a></li>
+				<li><a class="TagGrande" data-weight="24">VS Code</a></li>
+			</ul>
+		</div>
+
+		<table align="center" cellspacing="10" cellpadding="20">
+			<tr>
+				<td align="center">
+					<div class="container">
+						<div class="contenedorGeneXus col-sm">
+							<h4 style="color: #8892b0">GeneXus Experience</h4>
+							<div id="miContainerGeneXus">
+								<canvas width="350" height="350" id="miCanvasGeneXus">
+									<p>No hay elementos a mostrar</p>
+								</canvas>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td width="50px"></td>
+				<td align="center">
+					<div class="container">
+						<div class="contenedorLenguajesProgramacion col-sm">
+							<h4 style="color: #8892b0">Programming Languages</h4>
+							<div id="miContainerLenguajesProgramacion">
+								<canvas
+									width="350"
+									height="350"
+									id="miCanvasLenguajesProgramacion"
+								>
+									<p>No hay elementos a mostrar</p>
+								</canvas>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<hr />
+
+		<table align="center" cellspacing="4" cellpadding="20">
+			<tr>
+				<td align="center">
+					<div class="container">
+						<div class="contenedorTecnologiasWeb col-sm">
+							<h4 style="color: #8892b0">WEB Technologies</h4>
+							<div id="miContainerTecnologiasWeb">
+								<canvas width="350" height="350" id="miCanvasTecnologiasWeb">
+									<p>No hay elementos a mostrar</p>
+								</canvas>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td width="50px"></td>
+				<td align="center">
+					<div class="container">
+						<div class="contenedorJavaScript col-sm">
+							<h4 style="color: #8892b0">JavaScript Tools</h4>
+							<div id="miContainerJavaScript">
+								<canvas width="350" height="350" id="miCanvasJavaScript">
+									<p>No hay elementos a mostrar</p>
+								</canvas>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<hr />
+
+		<table align="center" cellspacing="10" cellpadding="20">
+			<tr>
+				<td align="center">
+					<div class="container">
+						<div class="contenedorBD col-sm">
+							<h4 style="color: #8892b0">Operating Systems & DB Engine</h4>
+							<div id="miContainerSODB">
+								<canvas width="350" height="350" id="miCanvasSODB">
+									<p>No hay elementos a mostrar</p>
+								</canvas>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td width="50px"></td>
+				<td align="center">
+					<div class="container">
+						<div class="contenedorDevOps col-sm">
+							<h4 style="color: #8892b0">DevOps Tools</h4>
+							<div id="miContainerDevOps">
+								<canvas width="350" height="350" id="miCanvasDevOps">
+									<p>No hay elementos a mostrar</p>
+								</canvas>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
 	</body>
 </html>

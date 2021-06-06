@@ -927,3 +927,46 @@ tr:nth-child(even) {
   .sidenav a:hover {
     color: #f1f1f1;
   }
+
+  .TagGrande {
+      color: #61fdd9;
+  }
+
+  .TagMediano {
+    color: #90aaff;
+  }
+
+  .TagChico {
+    color: #fdf8ae;
+ }
+
+ .box {
+    display: flex;
+  }
+
+
+  .cuadradoHigh {
+    height: 15px;
+    width: 15px;
+    background-color: #61fdd9;
+  }
+
+  .cuadradoMedium {
+    height: 15px;
+    width: 15px;
+    background-color: #90aaff;
+  }
+
+  .cuadradoLow {
+    height: 15px;
+    width: 15px;
+    background-color: #fdf8ae;
+  }
+
+  .Leyenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    padding-left: 5px;
+  }
